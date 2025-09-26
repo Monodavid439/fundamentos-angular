@@ -1,0 +1,15 @@
+<h2>Gestor de Tarea</h2>
+
+<input type="text" [(ngModel)]="tarea" placeholder="Escribe tu tarea">
+<button (click)="enviarTarea()">Enviar tarea</button>
+
+<p *ngIf="estado === 'pendiente'">Tarea pendiente: {{ tarea }}</p>
+<p *ngIf="estado === 'iniciando'">Iniciando tarea: {{ tarea }}</p>
+<p *ngIf="estado === 'proceso'">Tarea en proceso: {{ tarea }}</p>
+<p *ngIf="estado === 'completada'">Tarea completada: {{ tarea }}</p>
+
+
+<app-hijo 
+  [tarea]="tarea" 
+  (tareaCompletada)="marcarComoCompletada()">
+</app-hijo>

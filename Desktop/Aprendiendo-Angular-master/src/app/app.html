@@ -1,0 +1,10 @@
+<app-contador></app-contador>
+<br><br><br>
+
+<input type="texto" [(ngModel)] ="textoInput">
+<br>
+<app-boton texto="Mostrar texto" (actionClick) ="mostrarTexto()"></app-boton>
+<app-boton texto="Cambiar texto" (actionClick) ="cambiarTexto()"></app-boton>
+<br>
+
+<app-tareas></app-tareas> 
